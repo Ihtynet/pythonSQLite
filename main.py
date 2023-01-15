@@ -30,7 +30,7 @@ for  s in mas:
     cursor.execute("INSERT INTO tovary VALUES(?, ?, ?, ?, ?);", tekStroka)
     conn.commit()
 fo.close()
-
+print("Товары загружены")
 
 fo =  open("org1/sales.csv", "r", encoding="utf-8")
 mas = fo.read().split("\n")
@@ -40,6 +40,7 @@ for  s in mas:
     cursor.execute("INSERT INTO sales VALUES(?, ?, ?, ?, ?, ?);", tekStroka)
     conn.commit()
 fo.close()
+print("Продажи загружены")
 
 fo =  open("org1/zakupki.csv", "r", encoding="utf-8")
 mas = fo.read().split("\n")
@@ -50,4 +51,4 @@ for  s in mas:
     cursor.execute("INSERT INTO zakupki VALUES(?, ?, ?, ?, ?, ?);", tekStroka)
     conn.commit()
 fo.close()
-
+print("Закупки загружены")
